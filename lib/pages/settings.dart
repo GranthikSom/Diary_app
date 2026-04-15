@@ -1,115 +1,13 @@
-import 'package:dairyhelper/themes/theme_provider.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-//import 'package:url_launcher/url_launcher.dart';
-import 'package:provider/provider.dart';
 
-class SettingsPage extends StatelessWidget {
-  const SettingsPage({super.key});
-  //Future<void> openWebsite() async {
-  //final Uri url = Uri.parse('https://github.com/GranthikSom/music_app');
-
-  //if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
-  //throw Exception('Could not launch $url');
-  //}
-  //}
+class Settings extends StatelessWidget {
+  const Settings({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('S E T T I N G S')),
-      body: ListView(
-        padding: EdgeInsets.zero,
-        children: [
-          Column(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.primary.withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                margin: EdgeInsets.all(20),
-                padding: EdgeInsets.all(20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Dark Mode',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    //switch
-                    CupertinoSwitch(
-                      value: Provider.of<ThemeProvider>(
-                        context,
-                        listen: false,
-                      ).isDarkMode,
-                      onChanged: (value) => Provider.of<ThemeProvider>(
-                        context,
-                        listen: false,
-                      ).toggleTheme(),
-                    ),
-                  ],
-                ),
-              ),
-
-              GestureDetector(
-                onTap: () {
-                  ();
-                },
-                child: Container(
-                  height: 80,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Theme.of(
-                      context,
-                    ).colorScheme.primary.withOpacity(0.2),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  margin: EdgeInsets.all(20),
-                  padding: EdgeInsets.all(20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'ABOUT ',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          textBaseline: TextBaseline.alphabetic,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Container(
-                height: 80,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.primary.withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                margin: EdgeInsets.all(20),
-                padding: EdgeInsets.all(20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Log Out',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        textBaseline: TextBaseline.alphabetic,
-                        fontSize: 20,
-                        color: Colors.red,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
+      appBar: AppBar(title: const Text('Settings')),
+      body: const Center(child: Text('Settings content goes here')),
     );
   }
 }

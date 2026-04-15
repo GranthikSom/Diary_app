@@ -1,5 +1,6 @@
 import 'package:dairyhelper/features/drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -13,8 +14,19 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
-      appBar: AppBar(title: const Text('Dairy Helper')),
-      drawer: MyDrawer(),
+      appBar: AppBar(
+        title: Align(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            "Cursive Text",
+            style: GoogleFonts.pacifico(fontSize: 24),
+          ),
+        ),
+        backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.0),
+      ),
+      drawer: const MyDrawer(),
+
+      floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
     );
   }
 }

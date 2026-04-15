@@ -1,5 +1,5 @@
 import 'package:dairyhelper/pages/homepage.dart';
-import 'package:dairyhelper/pages/settings.dart' show SettingsPage;
+import 'package:dairyhelper/pages/settings.dart';
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -53,7 +53,7 @@ class MyDrawer extends StatelessWidget {
 
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SettingsPage()),
+                  MaterialPageRoute(builder: (context) => Settings()),
                 );
               },
             ),
