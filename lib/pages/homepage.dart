@@ -1,3 +1,4 @@
+import 'package:dairyhelper/features/bottombar.dart';
 import 'package:dairyhelper/features/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,16 +18,15 @@ class _HomepageState extends State<Homepage> {
       appBar: AppBar(
         title: Align(
           alignment: Alignment.centerLeft,
-          child: Text(
-            "Cursive Text",
-            style: GoogleFonts.pacifico(fontSize: 24),
-          ),
+          child: Text("Dear Diary", style: GoogleFonts.pacifico(fontSize: 24)),
         ),
         backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.0),
       ),
       drawer: const MyDrawer(),
 
       floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
+
+      bottomNavigationBar: const Bottombar(),
     );
   }
 }
