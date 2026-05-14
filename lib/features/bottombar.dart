@@ -9,13 +9,13 @@ class Bottombar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomAppBar(
       height: 50,
-      color: Theme.of(context).colorScheme.primary.withOpacity(0.2),
+      color: Theme.of(context).colorScheme.secondary.withOpacity(0.2),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          IconButton(icon: const Icon(Icons.search), onPressed: () {}),
+          IconButton(icon: const Icon(Icons.question_mark), onPressed: () {}),
           IconButton(
-            icon: const Icon(Icons.album),
+            icon: const Icon(Icons.question_mark),
             onPressed: () {
               Navigator.pop(context);
 
@@ -26,7 +26,7 @@ class Bottombar extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: const Icon(Icons.add),
+            icon: const Icon(Icons.question_mark),
             onPressed: () {
               Navigator.pop(context);
 
@@ -37,7 +37,7 @@ class Bottombar extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: const Icon(Icons.home),
+            icon: const Icon(Icons.question_mark),
             onPressed: () {
               Navigator.pop(context);
 
@@ -48,7 +48,7 @@ class Bottombar extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: const Icon(Icons.person),
+            icon: const Icon(Icons.question_mark),
             onPressed: () {
               Navigator.pop(context);
 
